@@ -1,6 +1,6 @@
 # 📏 Size_Detect_OpenCV – Measure Real-World Object Sizes Using OpenCV
 
-**ObjectSizer** is a Python application that uses OpenCV to measure the real-world dimensions of objects in a video. It leverages computer vision techniques and a reference object (like an A4 paper or coin) to calculate accurate sizes.
+**Size_Detect_OpenCV** is a Python application that uses OpenCV to measure the real-world dimensions of objects in a video. It leverages computer vision techniques and a reference object (like an A4 paper or coin) to calculate accurate sizes.
 
 ---
 
@@ -19,5 +19,8 @@
 ```bash
 git clone https://github.com/n1s1th/Size_Detect_OpenCV.git
 cd Size_Detect_OpenCV
+
+### 2. Create a Virtual Environment
+
 
     
