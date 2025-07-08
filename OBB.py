@@ -1,3 +1,4 @@
+#Oriented Bounding Box(OBB)
 import cv2
 import numpy as np
 
@@ -32,7 +33,7 @@ while True:
 
         # Convert to box points
         box = cv2.boxPoints(rect)
-        box = np.int0(box)
+        box = box.astype(np.intp)
 
         # Draw the OBB
         cv2.drawContours(frame, [box], 0, (0, 255, 0), 2)
