@@ -17,7 +17,11 @@ while True:
     blur = cv2.GaussianBlur(gray, (5, 5), 0)
     
     # Thresholding (you can also try cv2.Canny for edges)
-    _, thresh = cv2.threshold(blur, 60, 255, cv2.THRESH_BINARY_INV)
+    #_, thresh = cv2.threshold(blur, 60, 255, cv2.THRESH_BINARY_INV)
+
+    #edge detection
+    thresh = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_MEAN_C, 
+                               cv2.THRESH_BINARY_INV, 11, 2)
 
     # Find contours
     contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
