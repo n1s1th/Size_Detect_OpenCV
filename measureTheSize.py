@@ -4,7 +4,7 @@ import math
 points = []
 
 #Pixels to cm ratio
-ratio=8/123
+ratio=10/162
 # This ratio is based on a known measurement (e.g., 10 cm corresponds to 137 pixels).
 
 
