@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 
 # Pixels to cm ratio (adjust this based on your calibration)
-ratio = 8 / 123  # For example, 123 pixels = 8 cm
+ratio = 16.5 / 254  # For example, 123 pixels = 8 cm
 
 cap = cv2.VideoCapture(2)
 
