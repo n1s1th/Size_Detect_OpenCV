@@ -1,0 +1,1 @@
+# Display size on the image

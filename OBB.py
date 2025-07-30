@@ -5,7 +5,7 @@ import numpy as np
 # Pixels to cm ratio (adjust this based on your calibration)
 ratio = 16.5 / 254  # For example, 123 pixels = 8 cm
 
-cap = cv2.VideoCapture(2)
+cap = cv2.VideoCapture(0)
 
 while True:
     ret, frame = cap.read()
