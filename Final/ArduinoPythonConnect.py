@@ -70,9 +70,16 @@ def findTheSize():
 
     return float(width_cm), float(height_cm)
 
+    
 def sortingBaseSize(width, length):
-    # Placeholder: you will provide the implementation
-    pass
+    area = width * length
+
+    if area < 20:
+        return "small"
+    else:
+        return "large"
+
+
 
 def get_user_input():
     x_coordinate = input("Enter first coordinate (string): ")
@@ -131,6 +138,4 @@ def communicate_with_arduino():
 
 if __name__ == "__main__":
     #communicate_with_arduino()
-    findTheSize()
-    
-
+    findTheSize() 
