@@ -3,7 +3,7 @@ import numpy as np
 
 # --- CONFIGURABLE PARAMETERS ---
 grid_w, grid_h = 700, 500          # Virtual grid size in pixels (for perspective warping)
-num_cells_x, num_cells_y = 7, 5    # Number of grid columns and rows
+num_cells_x, num_cells_y = 2, 4    # Number of grid columns and rows
 
 # --- GLOBALS FOR MOUSE CALLBACK ---
 clicked_points = []
