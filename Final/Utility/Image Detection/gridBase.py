@@ -22,7 +22,7 @@ MIN_AREA = 900
 MAX_AREA = 90000
 OTSU_SENSITIVITY = 22
 
-def capture_image(cam_index=0, window_name="Capture (SPACE to save, ESC to exit)"):
+def capture_image(cam_index=2, window_name="Capture (SPACE to save, ESC to exit)"):
     cap = cv2.VideoCapture(cam_index)
     if not cap.isOpened():
         print("Error: Could not open camera.")
