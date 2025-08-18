@@ -1,22 +1,31 @@
 import serial
 import time
 
-ser = serial.Serial('COM6', 9600, timeout=1)
+SERIAL_PORT = 'COM6'
+BAUD_RATE = 9600
+
+ser = serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=1)
 time.sleep(2)
 
-# Read and print Arduino's startup messages
+# Print Arduino startup messages
 while True:
     if ser.in_waiting:
-        print(ser.readline().decode('utf-8').strip())
-        break
+        line = ser.readline().decode('utf-8').strip()
+        print("Arduino:", line)
+        if "slider position" in line:
+            break
 
-# Send input to Arduino
-ser.write(b"B c\n")
+# Prompt user and send input to Arduino
+user_input = input("Enter slider position and arm (e.g. C c): ")
+ser.write((user_input + '\n').encode())
+print("Sent:", user_input)
 
-# Print Arduino response
+# Continue to read Arduino responses (for the next steps)
 while True:
     if ser.in_waiting:
-        print(ser.readline().decode('utf-8').strip())
+        line = ser.readline().decode('utf-8').strip()
+        print("Arduino:", line)
+        # Add more logic here for the rest of your workflow
         break
 
 ser.close()
